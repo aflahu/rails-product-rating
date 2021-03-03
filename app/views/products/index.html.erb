@@ -1,0 +1,14 @@
+<div>
+
+<h1>Products</h1>
+
+<ul>
+<% @products.each do |product| %>
+  <li><%= link_to product.name, product_url(product) %></li>
+<% end %>
+</ul>
+
+<br />
+<%= link_to 'Add Product', new_product_url %>
+
+</div>

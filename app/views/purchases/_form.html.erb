@@ -1,0 +1,19 @@
+<div>
+  <%= form_with model: [@product, @purchase], local: true do |f| %>
+  <div style="margin-top: 10px">
+    <div>
+      <%= f.label :quantity %>
+      <div><%= f.text_field :quantity %></div>
+
+      <div style="margin-top: 10px">
+        <div>
+          <%= f.label :delivery_address %>
+          <div><%= f.text_area :delivery_address %></div>
+
+          <div style="margin-top: 14px"><%= f.submit %></div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

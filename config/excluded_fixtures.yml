@@ -1,0 +1,4 @@
+---
+- ApplicationRecord
+- ActiveStorage::Attachment
+- ActiveStorage::Blob

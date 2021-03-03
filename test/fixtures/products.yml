@@ -1,0 +1,15 @@
+---
+Product_1:
+  created_at: 2020-06-05 10:42:05.392678000 Z
+  id: 1
+  name: Product One
+  price: !ruby/object:BigDecimal 18:0.1e3
+  quantity: 20
+  updated_at: 2020-06-05 10:42:05.392678000 Z
+Product_2:
+  created_at: 2020-06-06 04:28:34.545158000 Z
+  id: 2
+  name: Product Two
+  price: !ruby/object:BigDecimal 18:0.15e3
+  quantity: 12
+  updated_at: 2020-06-06 04:28:34.545158000 Z

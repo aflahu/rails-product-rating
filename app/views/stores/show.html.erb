@@ -1,0 +1,29 @@
+<div>
+  <h1>Store #<%= @store.id %></h1>
+
+  Name: <%= @store.name %>
+  <br />
+  Url: <%= @store.url %>
+  <br />
+  <br />
+  Created at: <%= @store.created_at.strftime("%B %d, %Y, %A") %>
+  <br />
+  Average rating: <%= @rating %>
+
+  <br />
+  <br />
+  <%= link_to 'Buy', new_product_url(@store) %>
+</div>
+
+<br />
+<br />
+
+<div>
+  <h2>Products</h2>
+
+  <ul>
+    <% @store.products.each do |product| %>
+    <li><%= link_to "Product ##{product.id}", product_url(product) %></li>
+    <% end %>
+  </ul>
+</div>

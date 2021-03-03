@@ -1,0 +1,35 @@
+<div>
+  <h1>Product #<%= @product.id %></h1>
+
+  Name: <%= @product.name %>
+  <br />
+  Price: <%= format_price @product.price %>
+  <br />
+  Quantity: <%= @product.quantity %>
+  <br />
+  <%# COMEPLETED: Format the date time to make it more readable %> Posted on:
+  <%= @product.created_at.strftime("%B %d, %Y, %A") %>
+  <br />
+  <%# COMPLETED: Calculate average rating based on the reviews from all of the
+  product's purchases %> Average rating: <%= @rating %>
+
+  <br />
+  <br />
+  <%= link_to 'Buy', new_product_purchase_url(@product) %>
+</div>
+
+<br />
+<br />
+
+<div>
+  <h2>Purchases</h2>
+
+  <ul>
+    <% @product.purchases.each do |purchase| %>
+    <li>
+      <%= link_to "Purchase ##{purchase.id}", product_purchase_url(@product,
+      purchase) %>
+    </li>
+    <% end %>
+  </ul>
+</div>

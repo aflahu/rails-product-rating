@@ -1,0 +1,22 @@
+<div>
+
+<%= form_with model: @review, local: true do |f| %>
+  <%= f.hidden_field :purchase_id %>
+  <%= hidden_field_tag :product_id, params[:product_id] %>
+
+  <div style="margin-top: 10px;">
+    <div><%= f.label :rating %><div>
+    <%= f.number_field :rating, in: 0..5 %>
+  </div>
+  
+  <div style="margin-top: 10px;">
+    <div><%= f.label :comment %><div>
+    <%= f.text_field :comment %>
+  </div>
+  
+  <div style="margin-top: 14px;">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>
+
+</div>

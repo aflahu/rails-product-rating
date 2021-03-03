@@ -1,0 +1,29 @@
+<div>
+
+<%= form_with model: @product, local: true do |f| %>
+  <div style="margin-top: 10px;">
+    <div><%= f.label :name %><div>
+    <%= f.text_field :name %>
+  </div>
+  
+  <div style="margin-top: 10px;">
+    <div><%= f.label :price %><div>
+    <%= f.text_field :price %>
+  </div>
+  
+  <div style="margin-top: 10px;">
+    <div><%= f.label :quantity %><div>
+    <%= f.text_field :quantity %>
+  </div>
+
+  <div style="margin-top: 10px;">
+    <div><%= f.label :store_id %><div>
+    <div><%= f.select(:store_id, @store) %></div>
+  </div>
+  
+  <div style="margin-top: 14px;">
+    <%= f.submit "Create" %>
+  </div>
+<% end %>
+
+</div>
